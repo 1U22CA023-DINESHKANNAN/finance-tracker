@@ -1,0 +1,212 @@
+/* common styling */
+
+*{
+    padding: 0;
+    margin: 0;
+}
+/* body styling*/
+.register-master{
+    background: linear-gradient(135deg, #3ab5b0 0%, #3d99be 31%, #56317a 100%);
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* regisgter block */
+.register-block{
+    width: 80vw;
+    height: 80vh;
+    background-color: white;
+    display: flex;
+    box-shadow: 0 0 60px -20px black;
+}
+
+/* login/signup welcome image */
+
+.welcome-image-register{
+    width: 40%;
+    height: 100%;
+    position: relative;
+    background: url("../assets/login-signup-page-image.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+/* registeration form block */
+
+.registeration-form-block{
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+}
+.registeration-form-block::after{
+    content: "";
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(135deg, #3ab5b0 0%, #3d99be 31%,  #56317a 100%);
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    border-radius: 50%;
+}
+.input-block{
+    width: 350px;
+    height: 30px;
+    margin: 15px 0;
+    position: relative;
+    border: none;
+}
+.input-block input{
+    width: 90%;
+    height: 100%;
+    outline: none;
+    border: none;
+    background-color: transparent;
+    padding: 0 5%;
+    border: 1.5px solid gray;
+    border-radius: 5px;
+}
+.input-block label{
+    position: absolute;
+    background-color: white;
+    padding: 0 5px;
+    top: 50%;
+    left: 5%;
+    transform: translate(0%,-50%);
+    cursor: text;
+    color: gray;
+    transition: .2s;
+}
+.input-block input:focus + label,.input-block input:valid + label{
+    top:0;
+    font-size: 80%;
+    color: #3d99be;
+}
+.input-block input:focus{
+    border-color: #3d99be;
+}
+
+.registeration-form-block h1{
+    width: 350px;
+    position: relative;
+    margin-bottom: 5px;
+}
+.registeration-form-block h1::after{
+    content: "";
+    width: 60px;
+    height: 10px;
+    background-color: #3d99be;
+    position: absolute;
+    top: -5px;
+    left: 0;
+    border-radius: 20px;
+}
+/*register login button*/
+
+.input-submit input[type="submit"]{
+    width: 350px;
+    background-color: #3d99be;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    color: black;
+    margin-top: 10px;
+}
+.input-submit input[type="submit"]:hover{
+    background-color: #398aaa;
+}
+
+/* register welcome page */
+
+.welcome-image-register{
+    position: relative;
+}
+.login-switch-block{
+    position: absolute;
+    width: 300px;
+    bottom: 0%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.login-switch-block button{
+    border: none;
+    padding: 5px 15px;
+    color: white;
+    background-color: transparent;
+    margin: 10px 0;
+    border-radius: 20px;
+    box-shadow: 0 0 10px 1px #003e57;
+}
+.login-switch-block button:active{
+    box-shadow: none;
+}
+.login-switch-block h3{
+    color: white;
+}
+/* switch to other page */
+
+.switchToOther span{
+    font-size: 80%;
+    color: rgb(53, 53, 53);
+}
+.switchToOther{
+    display: none;
+}
+/* login Warning message */
+.login-warning-message{
+    color: red;
+}
+
+/* mobile view styling begins */
+@media screen and (max-width:679px){
+
+/* welcome page */
+
+.welcome-image-register{
+    display: none;
+}
+/* register block */
+
+.register-block{
+    width: 70vw;
+    height: 80vh;
+}
+.registeration-form-block{
+    width: 100%;
+}
+/* switch to login or register */
+.switchToOther{
+    display: block;
+}
+/*input block, registeration form heading, submit button*/
+.input-block,.registeration-form-block h1, .input-submit input[type="submit"]{
+    width: 320px;
+}
+
+}
+@media screen and (max-width:780px) and (min-width:680px){
+
+    .registeration-form-block{
+        width: 60%;
+    }
+    .welcome-image-register{
+        width: 40%;
+    }
+    /* switch to login or register */
+    /*input block, registeration form heading, submit button*/
+    .input-block,.registeration-form-block h1, .input-submit input[type="submit"]{
+        width: 300px;
+    }
+    }

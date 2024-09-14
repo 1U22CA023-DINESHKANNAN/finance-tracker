@@ -1,0 +1,117 @@
+  *{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    text-decoration: none;
+  }
+  .container > h1{
+    margin-bottom: 20px;
+  }
+  .container{
+    padding: 20px;
+  }
+  .row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .row2{
+    margin: 100px 0;
+  }
+  .row2 .block{
+    height: 400px;
+    background-color: transparent !important;
+  }
+  .balance-block{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin: 0 !important;
+    padding: 0 !important;
+    background-color: transparent !important;
+  }
+
+  .block,.card{
+    border-radius: 20px;
+  }
+  .block{
+    background-color: lightgray;
+    margin: 10px;
+    padding: 10px;
+  }
+  .danger{
+    background-color: red;
+  }
+  .primary{
+    background-color: blue;
+  }
+  .peace{
+    background-color: green;
+  }
+  .card{
+    padding: 10px;
+    margin: 10px;
+  }
+  .card{
+    color:white;
+  }
+
+  span{
+    font-weight: bold;
+  }
+  .add-transaction-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .add-transaction-container > form{
+    width: fit-content;
+  }
+  .add-transaction-container h2{
+    display: inline-block;
+    width: 250px;
+    text-align: left;
+  }
+  .add-transaction-container input[type="text"]{
+    width: 300px;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+  }
+  .add-transaction-container div{
+    margin: 10px;
+  }
+  .add-transaction-container input[type="radio"]{
+    padding: 10px;
+    margin: 10px;
+  }
+  .block{
+    position: relative;
+  }
+  .block > h1{
+    position: absolute;
+    top: -70px;
+    left: 0;
+    color: rgb(70, 70, 70);
+  }
+  button{
+    padding: 10px;
+    color: white;
+    border-radius: 10px;
+    border: none;
+  }
+  .add-to-list-button:hover{
+    background-color: rgb(52, 52, 253);
+  }
+  table{
+    width: 100%;
+    border-collapse: collapse;
+  }
+  table thead tr{
+    border-bottom: 1px solid gray;
+  }
+  table thead tr th h2, table td{
+    padding: 10px;
+  }
+  table td{
+    text-align: center;
+  }

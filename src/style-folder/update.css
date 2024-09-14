@@ -1,0 +1,31 @@
+.update-box-container{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, #3ab5b0 0%, #3d99be 31%, #56317a 100%);
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.updateform{
+    width: fit-content;
+    background-color: white;
+    padding: 20px;
+}
+.updateform input{
+    outline: none;
+}
+.updateform input:focus{
+    border-color: blue;
+}
+.updateform div{
+    display: flex;
+    margin: 10px 0;
+}
+.update-form-label{
+    display: inline-block;
+    width: 230px;
+}
+.updateform input[type="radio"]{
+    margin: 0 10px;
+}
