@@ -16,7 +16,7 @@
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
-  "homepage": "https://github.com/1U22CA023-DINESHKANNAN/Finance_Tracker",
+  "homepage": "https://github.com/1U22CA023-DINESHKANNAN/finance_tracker",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
