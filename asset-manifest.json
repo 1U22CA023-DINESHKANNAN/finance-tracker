@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/1U22CA023-DINESHKANNAN/finance-tracker/static/css/main.966dba97.css",
+    "main.js": "/1U22CA023-DINESHKANNAN/finance-tracker/static/js/main.8df4f83e.js",
+    "static/js/453.5b201049.chunk.js": "/1U22CA023-DINESHKANNAN/finance-tracker/static/js/453.5b201049.chunk.js",
+    "static/media/login-signup-page-image.jpg": "/1U22CA023-DINESHKANNAN/finance-tracker/static/media/login-signup-page-image.e61ea19f6b2a9c0b60cb.jpg",
+    "index.html": "/1U22CA023-DINESHKANNAN/finance-tracker/index.html",
+    "main.966dba97.css.map": "/1U22CA023-DINESHKANNAN/finance-tracker/static/css/main.966dba97.css.map",
+    "main.8df4f83e.js.map": "/1U22CA023-DINESHKANNAN/finance-tracker/static/js/main.8df4f83e.js.map",
+    "453.5b201049.chunk.js.map": "/1U22CA023-DINESHKANNAN/finance-tracker/static/js/453.5b201049.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.966dba97.css",
+    "static/js/main.8df4f83e.js"
+  ]
+}
