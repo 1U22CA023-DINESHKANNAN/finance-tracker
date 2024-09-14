@@ -32,10 +32,10 @@
     ],
     "rules": {
       "no-unused-vars": "warn",
-      "no-undef": "warn"
+      "react-hooks/exhaustive-deps": "warn"
     }
   }
-  ,
+    ,
   "browserslist": {
     "production": [
       ">0.2%",
