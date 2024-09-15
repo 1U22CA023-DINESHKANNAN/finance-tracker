@@ -4,7 +4,7 @@ import { useSearchParams } from 'react-router-dom';
 import Axios from 'axios';
 import { useNavigate,Link } from 'react-router-dom';
 import Chart from "chart.js/auto";
-import { Doughnut } from "react-chartjs-2";
+import { Doughnut,Bar } from "react-chartjs-2";
 export default function Dashboard() {
     const [userName, setUserName] = useState("");
     const [userId, setUserId] = useState("");
@@ -21,6 +21,9 @@ export default function Dashboard() {
     const [Doughnutlabel,setDoughnutlabel] = useState([])
     const [DoughnutData,setDoughnutData] = useState([])
 
+    const [Barlabel,setBarlabel] = useState([])
+    const [BarData,setBarData] = useState([])
+
     const navigate = useNavigate();
     const [TableData, setTableData] = useState([]);
 
@@ -29,7 +32,7 @@ export default function Dashboard() {
     const access = searchParams.get('access');
     const date = new Date()
     
-    const chartData = {
+    const DoughnutChartData = {
     datasets: [{
         data: DoughnutData,
         backgroundColor:["red","blue","green","yellow"]
@@ -37,11 +40,20 @@ export default function Dashboard() {
 
     // These labels appear in the legend and in the tooltips when hovering different arcs
     labels: Doughnutlabel
-};
+    };
+
+    const BarchartData = {
+    datasets: [{
+        data: BarData,
+        backgroundColor:["red","blue","green","yellow"]
+    }],
+
+    // These labels appear in the legend and in the tooltips when hovering different arcs
+    labels: Barlabel
+    };
     useEffect(() => {
         Axios.post("http://localhost:2000/getAllData", { id: userQueryId })
             .then(res => {
-                setUserId(res.data[0].ID);
                 setUserName(res.data[0].FIRST_NAME);
             })
             .catch(error => console.error(error));
@@ -70,8 +82,15 @@ export default function Dashboard() {
         const availableData = totalIncomeData - totalExpenceData;
         const todaysDate = date.toISOString().split("T")[0];
         const todaysData = ExpenceDatas.filter(item => item.DATE.split("T")[0] === todaysDate)
+
+        const currentMonth = new Date().toISOString().slice(0, 7);           
+        const thisMonthsData = ExpenceDatas.filter(item => item.DATE.slice(0, 7) === currentMonth);
+
         setDoughnutlabel(todaysData.map(item => item.TRANSACTION_NAME))
         setDoughnutData(todaysData.map(item => item.TRANSACTION_AMOUNT))
+
+        setBarlabel(thisMonthsData.map(item => item.TRANSACTION_NAME))
+        setBarData(thisMonthsData.map(item => item.TRANSACTION_AMOUNT))
 
 
         setTotalIncome(totalIncomeData);
@@ -198,10 +217,11 @@ export default function Dashboard() {
             <div className="row row2">
                 <div className="analytics-block block">
                     <h1>Today's Expence</h1>
-                    <Doughnut data ={chartData}/>
+                    <Doughnut data ={DoughnutChartData}/>
                 </div>
                 <div className="analytics-block block">
                     <h1>This Month's Expence</h1>
+                    <Bar data={BarchartData} />
                 </div>
             </div>
             <div className="row3">
